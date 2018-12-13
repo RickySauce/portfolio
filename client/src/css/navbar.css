@@ -1,0 +1,20 @@
+.navbar-default {
+  background-color: #E983DB;
+  background-image: none;
+  background-repeat: no-repeat;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+      color: #8AA1FE;
+  }
+
+  .navbar-default .container .navbar-header > a {
+    color: #8AA1FE;
+  }
+
+.nav-icon {
+  color: #8AA1FE;
+  width: 30px;
+  height: 30px;
+  margin: -10px;
+}
