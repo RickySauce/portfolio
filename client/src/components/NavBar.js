@@ -10,6 +10,18 @@ import { TiDocument} from "react-icons/ti";
 
 const NavBar = () => {
 
+  const clickLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/ericdesimone91/");
+  }
+
+  const clickGitHub = () => {
+    window.open("https://github.com/RickySauce");
+  }
+
+  const clickResume = () => {
+    window.open("https://drive.google.com/file/d/1X-ARgNxB664NeAdg6givUSp9Ga0PgLYi/view?usp=sharing")
+  }
+
   return (
   <Navbar default collapseOnSelect>
     <Navbar.Header>
@@ -19,12 +31,12 @@ const NavBar = () => {
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse >
-      <Nav pullLeft>
-      <NavItem eventKey={1}> <IoLogoLinkedin className='nav-icon'/></NavItem>
-      <NavItem eventKey={2}> <FaGithub className='nav-icon'/></NavItem>
-      <NavItem eventKey={3}> <TiDocument className='nav-icon'/></NavItem>
+      <Nav pullLeft style={{borderRight: "1px dashed #333"}}>
+      <NavItem eventKey={1}> <IoLogoLinkedin onClick={clickLinkedIn} className='nav-icon'/></NavItem>
+      <NavItem eventKey={2}> <FaGithub onClick={clickGitHub} className='nav-icon'/></NavItem>
+      <NavItem eventKey={3}> <TiDocument onClick={clickResume} className='nav-icon'/></NavItem>
       </Nav>
-      <Nav pullRight >
+      <Nav pullRight style={{borderLeft: "1px dashed #333"}}>
       <NavItem eventKey={4} componentClass={Link} href='/'  to='/'> About Me</NavItem>
       <NavItem eventKey={5} componentClass={Link} href='/projects'  to='/projects'> Projects</NavItem>
       <NavDropdown eventKey={6} title="Contact">
