@@ -1,20 +1,63 @@
 .navbar-default {
   background-color: #E983DB;
+  border-color: #E983DB;
   background-image: none;
   background-repeat: no-repeat;
  }
 
- .navbar-default .navbar-nav > li > a {
-      color: #8AA1FE;
-  }
+.navbar-default .navbar-nav > li > a {
+    color: black;
+    font-size: 16px;
+    font-family: Arial;
+}
 
-  .navbar-default .container .navbar-header > a {
-    color: #8AA1FE;
-  }
+.navbar-default .navbar-nav > li > a:hover {
+     color: #8AA1FE;
+     font-weight: bold;
+ }
+
+.navbar-default .container .navbar-header > a {
+  color: black;
+  font-family: Arial;
+}
+
+.navbar-default .container .navbar-header > a:hover {
+  color: #8AA1FE;
+  font-weight: bold;
+}
+
+.navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  border-color: #E983DB;
+  background-color: #E983DB;
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  color: #8AA1FE;
+  font-weight: bold;
+  border-color: #E983DB;
+  background-color: #E983DB;
+  background-image: none;
+  background-repeat: no-repeat;
+}
 
 .nav-icon {
-  color: #8AA1FE;
+  color: black;
   width: 30px;
   height: 30px;
   margin: -10px;
+}
+
+.nav-dropdown-icon {
+  color: black;
+  margin: 5px 15px 0px -10px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-icon:hover {
+  color: #8AA1FE;
+  width: 35px;
+  height: 35px;
 }

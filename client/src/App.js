@@ -9,7 +9,9 @@ class App extends Component {
     return (
       <div className="App">
       <Router>
-        <NavBar/>
+        <React.Fragment>
+          <NavBar/>
+        </React.Fragment>
       </Router>
       </div>
     );
