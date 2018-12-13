@@ -6,6 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub, FaPhoneSquare, FaDiscord, FaSlack} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TiDocument} from "react-icons/ti";
+import ReactTooltip from 'react-tooltip'
 
 
 const NavBar = () => {
@@ -24,6 +25,7 @@ const NavBar = () => {
 
   return (
   <Navbar default collapseOnSelect>
+  <ReactTooltip delayShow={300}/>
     <Navbar.Header>
       <Navbar.Brand>
         <Link to="/">Eric DeSimone</Link>
@@ -32,9 +34,9 @@ const NavBar = () => {
     </Navbar.Header>
     <Navbar.Collapse >
       <Nav pullLeft style={{borderRight: "1px dashed #333"}}>
-      <NavItem eventKey={1}> <IoLogoLinkedin onClick={clickLinkedIn} className='nav-icon'/></NavItem>
-      <NavItem eventKey={2}> <FaGithub onClick={clickGitHub} className='nav-icon'/></NavItem>
-      <NavItem eventKey={3}> <TiDocument onClick={clickResume} className='nav-icon'/></NavItem>
+      <NavItem data-tip="LinkedIn" eventKey={1}> <IoLogoLinkedin onClick={clickLinkedIn} className='nav-icon'/></NavItem>
+      <NavItem data-tip="GitHub" eventKey={2}> <FaGithub onClick={clickGitHub} className='nav-icon'/></NavItem>
+      <NavItem data-tip="Resume" eventKey={3}> <TiDocument onClick={clickResume} className='nav-icon'/></NavItem>
       </Nav>
       <Nav pullRight style={{borderLeft: "1px dashed #333"}}>
       <NavItem eventKey={4} componentClass={Link} href='/'  to='/'> About Me</NavItem>
