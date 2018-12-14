@@ -33,12 +33,12 @@ const NavBar = () => {
              </Tooltip>
            </Navigation>
            </span>}>
-          <Navigation className='nav-links'>
-            <Link to='/aboutme'>About Me</Link>
-            <Link to='/projects'>Projects</Link>
-            <Link to='/contact'>Contact</Link>
-          </Navigation>
-        </Header>
+            <Navigation className='nav-links'>
+              <Link to='/aboutme'>About Me</Link>
+              <Link to='/projects'>Projects</Link>
+              <Link to='/contact'>Contact</Link>
+            </Navigation>
+          </Header>
         </Layout>
     </div>
   )
