@@ -1,3 +1,11 @@
+#contact-card {
+  width: 370px;
+  height: 510px;
+  margin: auto;
+  margin-top: -200px;
+  float: right;
+}
+
 #email {
   padding-left: 3px;
   padding-right: 4px;
@@ -16,4 +24,19 @@
 
 #slack {
   padding: 3px;
+}
+
+.mdl-list__item-avatar:hover {
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+}
+
+/* .mdl-list__item-avatar:active {
+    background-color: transparent;
+} */
+
+.mdl-list__item-avatar:active {
+    border: 2px solid transparent;
+
 }

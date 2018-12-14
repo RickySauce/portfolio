@@ -28,7 +28,6 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <NavBar handleContact={this.handleContact}/>
-          <Contact/>
           {this.renderContact()}
           <Route exact path="/aboutme" component={AboutMe} />
         </React.Fragment>
