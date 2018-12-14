@@ -46,6 +46,17 @@
   background-color: #002967;
 }
 
+#contact-link{
+  padding-left: 24px;
+  color: rgb(255,255,255);
+  opacity: 0.87;
+  text-decoration: none;
+}
+#contact-link:hover{
+  font-weight: bold;
+}
+
+
 #nav-title{
   padding-right: 20px;
 }
@@ -65,11 +76,6 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
-}
-
-.nav-links a href{
-  color: black;
-  font-weight: bold;
 }
 
 .nav-links .mdl-navigation__link:hover{

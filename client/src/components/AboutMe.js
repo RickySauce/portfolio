@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../App.css';
-import { Card, CardTitle, CardText, CardActions} from 'react-mdl'
+import Img from '../download.jpg';
+import { Card, CardTitle, CardText, CardActions, Grid, Cell} from 'react-mdl'
 
 class AboutMe extends Component {
 
   render() {
     return (
-      <div className='main mdl-card mdl-shadow--2dp'>
-       <Card shadow={0} style={{width: '256px', height: '256px', background: '#3E4EB8'}}>
-       <CardText>
-       HEY BROS
-       </CardText>
-       </Card>
+      <div className='main'>
+        <Grid className="demo-grid-ruler">
+         <Card id='picture-card' shadow={5}>
+          <img src={Img} id='picture'/>
+         </Card>
+         <Cell col={1}> </Cell>
+         <Cell col={4} id='about-me'>
+           <p>
+            Howdy Partners! Name's Rickalis aka, sauce man, aka big DaddyRelij
+           </p>
+         </Cell>
+         </Grid>
       </div>
     );
   }
