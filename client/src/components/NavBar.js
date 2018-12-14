@@ -1,57 +1,50 @@
 import React from 'react';
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
 import '../css/navbar.css'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { Layout, Navigation, Header, Menu, MenuItem, Tooltip } from 'react-mdl'
 import { Link } from 'react-router-dom'
 import { IoLogoLinkedin } from "react-icons/io";
-import { FaGithub, FaPhoneSquare, FaDiscord, FaSlack} from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaGithub} from "react-icons/fa";
+import { MdMenu } from "react-icons/md";
 import { TiDocument} from "react-icons/ti";
-import ReactTooltip from 'react-tooltip'
-
 
 const NavBar = () => {
 
-  const clickLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/ericdesimone91/");
-  }
-
-  const clickGitHub = () => {
-    window.open("https://github.com/RickySauce");
-  }
-
-  const clickResume = () => {
-    window.open("https://drive.google.com/file/d/1X-ARgNxB664NeAdg6givUSp9Ga0PgLYi/view?usp=sharing")
+  const handleIconClick = (event) => {
+    event.preventDefault()
+    window.open(event.currentTarget.href)
   }
 
   return (
-  <Navbar default collapseOnSelect>
-  <ReactTooltip delayShow={300}/>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <Link to="/">Eric DeSimone</Link>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Collapse >
-      <Nav pullLeft style={{borderRight: "1px dashed #333"}}>
-      <NavItem data-tip="LinkedIn" eventKey={1}> <IoLogoLinkedin onClick={clickLinkedIn} className='nav-icon'/></NavItem>
-      <NavItem data-tip="GitHub" eventKey={2}> <FaGithub onClick={clickGitHub} className='nav-icon'/></NavItem>
-      <NavItem data-tip="Resume" eventKey={3}> <TiDocument onClick={clickResume} className='nav-icon'/></NavItem>
-      </Nav>
-      <Nav pullRight style={{borderLeft: "1px dashed #333"}}>
-      <NavItem eventKey={4} componentClass={Link} href='/'  to='/'> About Me</NavItem>
-      <NavItem eventKey={5} componentClass={Link} href='/projects'  to='/projects'> Projects</NavItem>
-      <NavDropdown eventKey={6} title="Contact">
-      <MenuItem eventKey={6.1}> <FaPhoneSquare className='nav-dropdown-icon'/> (347) 804-7316</MenuItem>
-      <MenuItem eventKey={6.2}> <MdEmail className='nav-dropdown-icon'/> eric.desimone@cortland.edu</MenuItem>
-      <MenuItem eventKey={6.3}> <FaDiscord className='nav-dropdown-icon'/> BigDaddyReligion#6629</MenuItem>
-      <MenuItem eventKey={6.4}> <FaSlack className='nav-dropdown-icon'/> @Eric DeSimone</MenuItem>
-      </NavDropdown>
-      </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div style={{height: '300px', position: 'relative'}}>
+      <Layout fixedHeader>
+        <Header title={<span>
+           <strong id="nav-title">Eric DeSimone</strong>
+           <Navigation className='nav-icons'>
+           <Tooltip label="Linkedin" position="bottom">
+             <a href='https://www.linkedin.com/in/ericdesimone91/' onClick={handleIconClick}><IoLogoLinkedin className='nav-icon'/></a>
+             </Tooltip>
+             <Tooltip label="Github" position="bottom">
+             <a href='https://github.com/RickySauce' onClick={handleIconClick}> <FaGithub className='nav-icon'/></a>
+             </Tooltip>
+             <Tooltip label="Résumé" position="bottom">
+             <a href='https://drive.google.com/file/d/1X-ARgNxB664NeAdg6givUSp9Ga0PgLYi/view?usp=sharing' onClick={handleIconClick}> <TiDocument className='nav-icon'/></a>
+             </Tooltip>
+           </Navigation>
+           </span>}>
+          <Navigation className='nav-links'>
+            <Link to='/aboutme'>About Me</Link>
+            <Link to='/projects'>Projects</Link>
+            <Link to='/contact'>Contact</Link>
+          </Navigation>
+        </Header>
+        </Layout>
+    </div>
   )
 }
+
+
 
 
 export default NavBar

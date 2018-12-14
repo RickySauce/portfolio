@@ -1,4 +1,4 @@
-.navbar-default {
+/* .navbar-default {
   background-color: #E983DB;
   border-color: #333;
   background-image: none;
@@ -40,24 +40,25 @@
   background-color: #E983DB;
   background-image: none;
   background-repeat: no-repeat;
+} */
+
+#nav-title{
+  padding-right: 20px;
+}
+
+.nav-icons {
+  display: inline;
 }
 
 .nav-icon {
-  color: black;
-  width: 30px;
-  height: 30px;
+  color: white;
+  width: 25px;
+  height: 25px;
   margin: -10px;
 }
 
-.nav-dropdown-icon {
-  color: black;
-  margin: 5px 15px 0px -10px;
-  width: 20px;
-  height: 20px;
-}
-
 .nav-icon:hover {
-  color: #8AA1FE;
-  width: 35px;
-  height: 35px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
