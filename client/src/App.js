@@ -17,7 +17,9 @@ class App extends Component {
   }
 
   handleContact = () => {
-    this.setState({contactOpen: this.state.contactOpen ? false : true})
+    this.setState(prevState => ({
+      contactOpen: prevState.contactOpen ? false: true
+    }))
   }
 
   render() {
@@ -25,7 +27,8 @@ class App extends Component {
       <div className="App">
       <Router>
         <React.Fragment>
-          <NavBar/>
+          <NavBar handleContact={this.handleContact}/>
+          <Contact/>
           {this.renderContact()}
           <Route exact path="/aboutme" component={AboutMe} />
         </React.Fragment>

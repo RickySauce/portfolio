@@ -23,6 +23,7 @@ class NavBar extends Component {
 
   handleContact = (event) => {
     event.preventDefault()
+    this.props.handleContact()
     if(this.state.contactOpen){
       this.setState({
         contactOpen: false,

@@ -1,0 +1,19 @@
+#email {
+  padding-left: 3px;
+  padding-right: 4px;
+}
+
+#phone {
+  padding: 4px;
+}
+
+#discord {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+}
+
+#slack {
+  padding: 3px;
+}
