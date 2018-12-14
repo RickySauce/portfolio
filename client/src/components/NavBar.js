@@ -22,6 +22,7 @@ class NavBar extends Component {
   }
 
   handleContact = (event) => {
+    event.preventDefault()
     if(this.state.contactOpen){
       this.setState({
         contactOpen: false,
@@ -61,7 +62,7 @@ render(){
               <Link to='/aboutme'>About Me</Link>
               <Link to='/projects'>Projects</Link>
             </Navigation>
-            <Link id='contact-link' to='/contact' onClick={this.handleContact} style={this.state.contactStyle}>Contact</Link>
+            <a id='contact-link' onClick={this.handleContact} style={this.state.contactStyle}>Contact</a>
           </Header>
         </Layout>
     </div>
