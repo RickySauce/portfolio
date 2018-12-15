@@ -26,6 +26,10 @@
   padding: 3px;
 }
 
+.__react_component_tooltip.show.type-dark.place-right {
+  background-color: rgba(97,97,97, 0.9);
+}
+
 .mdl-list__item-avatar:hover {
   cursor: pointer;
   height: 45px;
