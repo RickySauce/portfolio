@@ -8,8 +8,8 @@ import ProjectGroup from './ProjectGroup'
 class ProjectContainer extends Component {
 
   state = {
-    activeTab: 0,
-    tech: ['Ruby', 'Ruby on Rails', 'JavaScript', 'React']
+    activeTab: 3,
+    techs: ['Ruby', 'Ruby on Rails', 'JavaScript', 'React']
   }
 
   handleChange = (tabId) => {
@@ -17,7 +17,7 @@ class ProjectContainer extends Component {
   }
 
   mapTabs = () => {
-    return this.state.tech.map(tech =>{
+    return this.state.techs.map(tech =>{
       return <Tab>{tech}</Tab>  })
   }
 
@@ -34,7 +34,7 @@ class ProjectContainer extends Component {
               </Header>
             <Content>
                 <div className="page-content">
-                  <ProjectGroup activeTab={this.state.activeTab} tech={this.state.tech}/>
+                  <ProjectGroup tech={this.state.techs[this.state.activeTab]}/>
                 </div>
             </Content>
         </Layout>
