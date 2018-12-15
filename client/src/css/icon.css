@@ -36,11 +36,18 @@
   width: 45px;
 }
 
-/* .mdl-list__item-avatar:active {
-    background-color: transparent;
-} */
+.mdl-list__item-avatar {
+    background-color: #2251AB;
+}
 
 .mdl-list__item-avatar:active {
     border: 2px solid transparent;
+}
 
+.contact-item {
+  border-bottom: 1px dashed rgba(0,0,0,.5);
+}
+
+.contact-item > span > span {
+  font-style: oblique;
 }

@@ -21,7 +21,7 @@ const ContactItem = (props) => {
       )
 
     return (
-      <ListItem twoLine>
+      <ListItem twoLine className='contact-item'>
         <ListItemContent avatar={img} subtitle={props.subtitle}>{capitalize(props.title)}</ListItemContent>
       </ListItem>
   )
