@@ -3,8 +3,23 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../../css/projects.css'
 import { Layout, Header, HeaderRow, HeaderTabs, Tab, Drawer, Content} from 'react-mdl'
+import ProjectGroup from './ProjectGroup'
 
 class ProjectContainer extends Component {
+
+  state = {
+    activeTab: 0,
+    tech: ['Ruby', 'Ruby on Rails', 'JavaScript', 'React']
+  }
+
+  handleChange = (tabId) => {
+    this.setState({activeTab: tabId})
+  }
+
+  mapTabs = () => {
+    return this.state.tech.map(tech =>{
+      return <Tab>{tech}</Tab>  })
+  }
 
 
   render() {
@@ -13,15 +28,13 @@ class ProjectContainer extends Component {
         <Layout fixedTabs>
             <Header>
                 <HeaderRow id='tab-title-row' title="Projects" />
-                <HeaderTabs className='tab-bar' ripple activeTab={1} onChange={(tabId) => {console.log(tabId)}}>
-                    <Tab content="heyyy fartstain">Tab1</Tab>
-                    <Tab>Tab2</Tab>
-                    <Tab>Tab3</Tab>
+                <HeaderTabs className='tab-bar' ripple activeTab={0} onChange={(tabId) => {this.handleChange(tabId)}}>
+                  {this.mapTabs()}
                 </HeaderTabs>
               </Header>
             <Content>
                 <div className="page-content">
-                You can add logic to update the content of this container based on the "activeTab" receive in the `onChange` callback.
+                  <ProjectGroup activeTab={this.state.activeTab} tech={this.state.tech}/>
                 </div>
             </Content>
         </Layout>
