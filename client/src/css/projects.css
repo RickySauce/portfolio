@@ -1,0 +1,26 @@
+#project-container {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tab-title-row {
+  text-align: center;
+  background-color:  #2251AB;
+}
+
+#tab-title-row > span {
+  display: inline-block;
+  float: right;
+  margin: auto;
+}
+
+.tab-bar{
+  background-color: #002967;
+}
+
+.mdl-layout.is-upgraded .mdl-layout__tab.is-active::after{
+  background: magenta;
+}
