@@ -8,7 +8,7 @@ import ProjectGroup from './ProjectGroup'
 class ProjectContainer extends Component {
 
   state = {
-    activeTab: 3,
+    activeTab: 0,
     techs: ['Ruby', 'Ruby on Rails', 'JavaScript', 'React']
   }
 
