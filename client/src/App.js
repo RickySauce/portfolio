@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import AboutMe from './components/AboutMe'
-import Contact from './components/Contact'
+import ContactList from './components/ContactList'
 import './App.css';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   renderContact = () => {
-    return this.state.contactOpen ? <Contact/> : null
+    return this.state.contactOpen ? <ContactList/> : null
   }
 
   handleContact = () => {

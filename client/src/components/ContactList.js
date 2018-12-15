@@ -8,10 +8,11 @@ import {List, ListItem, ListItemContent, ListItemAction, Card, CardTitle, CardTe
 import copy from 'copy-to-clipboard';
 import ReactTooltip from 'react-tooltip'
 import capitalize from '../capitalize'
+import ContactItem from './ContactItem'
 
 
 
-class Contact extends Component {
+class ContactList extends Component {
 
   state = {
     email:'eric.desimone@cortland.edu',
@@ -22,6 +23,7 @@ class Contact extends Component {
 
   handleClick = (event) => {
     copy(this.state[event.currentTarget.id])
+    console.log("touched")
     }
 
 
@@ -32,6 +34,7 @@ class Contact extends Component {
         <CardTitle expand style={{color: '#fff', background: 'url(https://res.cloudinary.com/wajahatkarimcom/image/upload/v1518636807/contactme.png)95% #BDF3FE'}}>Contact Me</CardTitle>
         <CardText>
           <List id='contact-list' style={{width: '350px'}}>
+            <ContactItem img={<FaPhoneSquare data-tip='Copy Phone Number' onClick={this.handleClick} id='phone'/>} subtitle="(347) 804-7316" title='phone'/>
             <ListItem twoLine>
               <ListItemContent avatar={<MdEmail data-tip='Copy Email' onClick={this.handleClick} id='email'/>} subtitle="eric.desimone@cortland.edu">Email</ListItemContent>
             </ListItem>
@@ -52,4 +55,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default ContactList;
