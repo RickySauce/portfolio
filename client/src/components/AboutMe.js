@@ -9,7 +9,7 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div className='main'>
+      <div>
         <Grid className="demo-grid-ruler">
          <Card id='picture-card' shadow={5}>
           <img src={Img} id='picture'/>
