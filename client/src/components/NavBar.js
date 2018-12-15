@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../css/navbar.css'
-import { Layout, Navigation, Header, Menu, MenuItem, Tooltip } from 'react-mdl'
+import { Layout, Navigation, Header, MenuItem, Tooltip } from 'react-mdl'
 import { Link } from 'react-router-dom'
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub} from "react-icons/fa";
