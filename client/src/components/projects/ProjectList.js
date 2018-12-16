@@ -5,12 +5,15 @@ import '../../css/technology-icons.css'
 import { List } from 'react-mdl'
 import ProjectItem from './ProjectItem'
 
-const ProjectList = (projects) => {
+const ProjectList = ({projects}) => {
 
-  console.log(projects)
+  const mapProjects = () => {
+    return projects.map(project => <ProjectItem project={project}/>)
+  }
 
   return (
     <List style={{width: '100%'}}>
+      {mapProjects()}
     </List>
   );
 }
