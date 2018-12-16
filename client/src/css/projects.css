@@ -24,3 +24,20 @@
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after{
   background: magenta;
 }
+
+.project-icon {
+  float: left;
+  color: #2251AB;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#project-github{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#project-github > a:hover{
+  text-decoration: none;
+  font-size: 24px;
+}

@@ -2,22 +2,30 @@ import React from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../../css/technology-icons.css'
-import { ListItem, ListItemContent, ListItemAction } from 'react-mdl'
-import { FaGithub} from "react-icons/fa";
+import { ListItem, ListItemContent, ListItemAction, Tooltip, Cell, Grid } from 'react-mdl'
 
 const ProjectItem = ({project}) => {
 
   const mapTechIcons = () => {
-    return project.tech.map(tech => <em className={`icon-${tech} project-icon`}></em>)
+    return project.tech.map(tech => <Tooltip label={tech} position="bottom"><em className={`icon-${tech} project-icon`}></em></Tooltip>)
+  }
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    window.open(event.currentTarget.href)
   }
 
   return (
     <ListItem threeLine>
     <ListItemAction>
+        <Cell col={2}>
         {mapTechIcons()}
-        <a href="#"><FaGithub/></a>
+        </Cell>
       </ListItemAction>
-      <ListItemContent  subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.">Bryan Cranston</ListItemContent>
+      <ListItemContent  subtitle={project.content}>{project.title} <Tooltip id='project-github' label='Check out the Repository!'>
+      <a href={project.gitLink} className='icon-github-circle' onClick={handleClick}></a>
+      </Tooltip>
+      </ListItemContent>
     </ListItem>
   );
 }
