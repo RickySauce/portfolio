@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../../css/projects.css'
-import { Layout, Header, HeaderRow, HeaderTabs, Tab, Drawer, Content} from 'react-mdl'
+import { Layout, Header, HeaderRow, HeaderTabs, Tab, Content} from 'react-mdl'
 import ProjectGroup from './ProjectGroup'
 
 class ProjectContainer extends Component {
