@@ -9,7 +9,7 @@ class ProjectContainer extends Component {
 
   state = {
     activeTab: 0,
-    techs: ['Ruby', 'Ruby on Rails', 'JavaScript', 'React']
+    techs: ['Ruby', 'Ruby on Rails', 'React']
   }
 
   handleChange = (tabId) => {

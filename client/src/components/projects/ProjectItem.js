@@ -7,7 +7,7 @@ import { ListItem, ListItemContent, ListItemAction, Tooltip, Cell, Grid } from '
 const ProjectItem = ({project}) => {
 
   const mapTechIcons = () => {
-    return project.tech.map(tech => <Tooltip label={tech} position="bottom"><em className={`icon-${tech} project-icon`}></em></Tooltip>)
+    return project.tech.map(tech => <Tooltip label={tech} position='bottom'><em className={`icon-${tech} project-icon`}></em></Tooltip>)
   }
 
   const handleClick = (event) => {
@@ -17,12 +17,10 @@ const ProjectItem = ({project}) => {
 
   return (
     <ListItem threeLine>
-    <ListItemAction>
-        <Cell col={2}>
+      <ListItemAction>
         {mapTechIcons()}
-        </Cell>
       </ListItemAction>
-      <ListItemContent  subtitle={project.content}>{project.title} <Tooltip id='project-github' label='Check out the Repository!'>
+      <ListItemContent subtitle={project.content}><span className='project-title'>{project.title}</span> <Tooltip id='project-github' label='Check out the Repository!' position='right'>
       <a href={project.gitLink} className='icon-github-circle' onClick={handleClick}></a>
       </Tooltip>
       </ListItemContent>
