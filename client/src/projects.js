@@ -45,7 +45,36 @@ const rubyOnRails = [
     'https://github.com/RickySauce/BeerReview-JQUERY'
   )
 ]
-const javaScript = []
-const react = []
 
-export {ruby, rubyOnRails, javaScript, react}
+const react = [
+  new Project(
+    'BeerReview-REACT',
+    `Idea adopted from Beer-Review-Sinatra.
+     Built with a React front end for an entirely redirectless user experience.
+     Makes use of React-Browser to simulate navigation to other routes within the app.
+     Uses Redux for easy update of the global store`,
+     ['rails','sql','react'],
+     'https://github.com/RickySauce/BeerReview-REACT'
+  ),
+
+  new Project(
+    'Joes-Breakfast-Shop',
+    `an application built for the startup company, 'Errunds', who abruptly stopped all communication with me after I explained how it was built.
+    Built with a React frontend.
+    Built on a Rails backend.
+    Utilizes the ActiveRecord ORM coupled with a Sqlit3 database.`,
+    ['rails','sql','react'],
+    'https://github.com/RickySauce/Joes-Breakfast-Shop'
+  ),
+
+  new Project(
+    'NFl-Pickems',
+    `designed to make weekly NFL pickem pools more convenient for groups of friends.
+     Makes use of the ruby gem Farraday to send http requests to a third-party API.
+     Works with dynamic time objects to give a user the most accurate game time information.`,
+     ['rails','sql','react'],
+     'https://github.com/RickySauce/NFl-Pickems'
+  )
+]
+
+export {ruby, rubyOnRails, react}
