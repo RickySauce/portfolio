@@ -80,7 +80,7 @@ const react = {
         `designed to make weekly NFL pickem pools more convenient for groups of friends.
          Makes use of the ruby gem Farraday to send http requests to a third-party API.
          Works with dynamic time objects to give a user the most accurate game time information.`,
-         ['rails','sql','react'],
+         ['react', 'bootstrap', 'rails'],
          'https://github.com/RickySauce/NFl-Pickems'
       )
     ]
