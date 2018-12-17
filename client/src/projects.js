@@ -29,7 +29,7 @@ const ruby = {
   }
 
 const rubyOnRails = {
-    imageUrl: '',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/1200px-Ruby_On_Rails_Logo.svg.png',
     projects: [
       new Project(
         'Home-Brews-Rails ',
@@ -53,7 +53,7 @@ const rubyOnRails = {
   }
 
 const react = {
-    imageUrl: '',
+    imageUrl: 'https://cdn-images-1.medium.com/max/679/1*qUlxDdY3T-rDtJ4LhLGkEg.png',
     projects: [
       new Project(
         'BeerReview-REACT',
