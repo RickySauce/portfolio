@@ -29,7 +29,7 @@ class App extends Component {
         <React.Fragment>
           <NavBar handleContact={this.handleContact}/>
           {this.renderContact()}
-          <div className='main'>
+          <div id='main'>
             <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/projects" component={ProjectContainer} />
           </div>

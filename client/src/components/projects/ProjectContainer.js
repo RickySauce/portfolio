@@ -4,12 +4,14 @@ import 'react-mdl/extra/material.js';
 import '../../css/projects.css'
 import { Layout, Header, HeaderRow, HeaderTabs, Tab, Content} from 'react-mdl'
 import ProjectGroup from './ProjectGroup'
+import * as techs from '../../projects.js'
+import jsParser from '../../jsParser'
 
 class ProjectContainer extends Component {
 
   state = {
     activeTab: 0,
-    techs: ['Ruby', 'Ruby on Rails', 'React']
+    techs: Object.keys(techs).map(tech => {return {[tech]: techs[tech]}})
   }
 
   handleChange = (tabId) => {
@@ -17,12 +19,14 @@ class ProjectContainer extends Component {
   }
 
   mapTabs = () => {
-    return this.state.techs.map(tech =>{
-      return <Tab>{tech}</Tab>  })
+    return this.state.techs.map((tech,index) => {
+      return <Tab key={index}>{jsParser(Object.keys(tech)[0])}</Tab>
+    })
   }
 
 
   render() {
+    console.log(this.state.techs)
     return (
       <div id='project-container'>
         <Layout fixedTabs>

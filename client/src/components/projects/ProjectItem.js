@@ -7,7 +7,7 @@ import { ListItem, ListItemContent, ListItemAction, Tooltip, Cell, Grid } from '
 const ProjectItem = ({project}) => {
 
   const mapTechIcons = () => {
-    return project.tech.map(tech => <Tooltip label={tech} position='bottom'><em className={`icon-${tech} project-icon`}></em></Tooltip>)
+    return project.tech.map((tech,index) => <Tooltip label={tech} key={index} position='bottom'><em className={`icon-${tech} project-icon`}></em></Tooltip>)
   }
 
   const handleClick = (event) => {

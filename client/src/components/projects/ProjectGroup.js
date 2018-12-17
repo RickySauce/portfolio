@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProjectList from './ProjectList'
-import * as techs from '../../projects.js'
-import parser from '../../parser.js'
 
+const ProjectGroup = ({tech}) => {
 
-class ProjectGroup extends Component {
+  debugger;
 
-  render() {
-    console.log(parser(this.props.tech))
-    return (
-      <div>
-      <ProjectList projects={techs[parser(this.props.tech)]}/>
-    </div>
-    );
-  }
+  return (
+    <div>
+    <ProjectList projects={tech[Object.keys(tech)[0]].projects}/>
+  </div>
+  );
 }
 
 export default ProjectGroup;

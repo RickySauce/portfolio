@@ -8,7 +8,7 @@ import ProjectItem from './ProjectItem'
 const ProjectList = ({projects}) => {
 
   const mapProjects = () => {
-    return projects.map(project => <ProjectItem project={project}/>)
+    return projects.map((project,index) => <ProjectItem key={index} project={project}/>)
   }
 
   return (
