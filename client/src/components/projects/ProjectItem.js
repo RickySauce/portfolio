@@ -17,9 +17,11 @@ const ProjectItem = ({project}) => {
 
   return (
     <ListItem threeLine>
+      <Cell col={1}>
       <ListItemAction>
         {mapTechIcons()}
       </ListItemAction>
+      </Cell>
       <ListItemContent subtitle={project.content}><span className='project-title'>{project.title}</span> <Tooltip id='project-github' label='Check out the Repository!' position='right'>
       <a href={project.gitLink} className='icon-github-circle' onClick={handleClick}></a>
       </Tooltip>
