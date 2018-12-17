@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
-import AboutMe from './components/AboutMe'
+import AboutMeContainer from './components/aboutme/AboutMeContainer'
 import ContactList from './components/ContactList'
 import ProjectContainer from './components/projects/ProjectContainer'
 import './App.css';
@@ -30,7 +30,7 @@ class App extends Component {
           <NavBar handleContact={this.handleContact}/>
           {this.renderContact()}
           <div id='main'>
-            <Route exact path="/aboutme" component={AboutMe} />
+            <Route exact path="/aboutme" component={AboutMeContainer} />
             <Route exact path="/projects" component={ProjectContainer} />
           </div>
         </React.Fragment>
