@@ -6,6 +6,7 @@ import { Layout, Header, HeaderRow, HeaderTabs, Tab, Content} from 'react-mdl'
 import ProjectGroup from './ProjectGroup'
 import * as techs from '../../projects.js'
 import jsParser from '../../jsParser'
+import ProjectImage from './ProjectImage'
 
 class ProjectContainer extends Component {
 
@@ -24,9 +25,13 @@ class ProjectContainer extends Component {
     })
   }
 
+  renderProjectGroup = () => {
+    const tech = this.state.techs[this.state.activeTab][Object.keys(this.state.techs[this.state.activeTab])[0]]
+    return tech ? <><ProjectGroup tech={tech}/> <ProjectImage img={tech.imageUrl}/></> : null
+  }
+
 
   render() {
-    console.log(this.state.techs)
     return (
       <div id='project-container'>
         <Layout fixedTabs>
@@ -38,7 +43,7 @@ class ProjectContainer extends Component {
               </Header>
             <Content>
                 <div className="page-content">
-                  <ProjectGroup tech={this.state.techs[this.state.activeTab]}/>
+                  {this.renderProjectGroup()}
                 </div>
             </Content>
         </Layout>
