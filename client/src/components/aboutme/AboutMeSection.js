@@ -3,6 +3,7 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../../css/aboutme.css';
 import { List } from 'react-mdl'
+import SchoolItem from './SchoolItem'
 
 const AboutMeSection = ({content}) => {
 
@@ -11,13 +12,19 @@ const renderTag = () => {
     return React.createElement(
         `p`,
         {
-          className: 'about-me-content',
-          style: {textAlign: 'left', margin: 'auto'}
+          className: 'about-me-content'
         },
         content
       )
   } else {
-    return <span> "hello" </span>
+    const listItems =  content.map((item,index) => {
+      if (item.constructor.name === 'SchoolHistory') {
+        return <SchoolItem key={index} item={item}/>
+      } else {
+        return <SchoolItem key={index} item={item}/>
+      }
+    })
+    return <List className='about-me-list'> {listItems} </List>
   }
 }
 

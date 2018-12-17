@@ -22,7 +22,6 @@ class AboutMeContainer extends Component {
   }
 
   render() {
-    console.log(this.state.sections[this.state.activeTab])
     return (
       <div>
         <div id='picture-tab-header'>

@@ -22,7 +22,7 @@ const ProjectItem = ({project}) => {
         {mapTechIcons()}
       </ListItemAction>
       </Cell>
-      <ListItemContent subtitle={project.content}><span className='project-title'>{project.title}</span> <Tooltip id='project-github' label='Check out the Repository!' position='right'>
+      <ListItemContent className='project-item' subtitle={project.content}><span className='project-title'>{project.title}</span> <Tooltip id='project-github' label='Check out the Repository!' position='right'>
       <a href={project.gitLink} className='icon-github-circle' onClick={handleClick}></a>
       </Tooltip>
       </ListItemContent>

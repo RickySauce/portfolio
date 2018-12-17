@@ -36,3 +36,15 @@
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after{
   background: #002967;
 }
+
+.about-me-content {
+  line-height: 25px;
+  text-align: left;
+  margin: auto;
+}
+
+.about-me-list {
+  width: 85%;
+  float: right;
+  margin-right: -37px;
+}

@@ -47,7 +47,7 @@
   position: relative;
 }
 
-.mdl-list__item-primary-content .mdl-list__item-text-body{
+.project-item .mdl-list__item-text-body{
   color: black;
 }
 
