@@ -24,18 +24,26 @@ class AboutMeContainer extends Component {
   render() {
     return (
       <div>
-        <div id='picture-tab-header'>
          <Card id='picture-card' shadow={5}>
           <img src={Img} id='picture'/>
          </Card>
-         <Tabs id='francine' activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-             {this.mapTabs()}
-         </Tabs>
+         <div id='about-me-main'>
+          <div id='about-me-title'>
+            <span>My Life</span>
+          </div>
+          <p>
+          {sections.myLife}
+          </p>
          </div>
-           <AboutMeSection content={this.state.sections[this.state.activeTab]}/>
+         <div id='about-me-history'>
+         </div>
       </div>
     );
   }
 }
+
+// <Tabs id='francine' activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
+//     {this.mapTabs()}
+// </Tabs>
 
 export default AboutMeContainer;

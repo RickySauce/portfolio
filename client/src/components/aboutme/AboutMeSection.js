@@ -4,6 +4,7 @@ import 'react-mdl/extra/material.js';
 import '../../css/aboutme.css';
 import { List } from 'react-mdl'
 import SchoolItem from './SchoolItem'
+import WorkItem from './WorkItem'
 
 const AboutMeSection = ({content}) => {
 
@@ -21,7 +22,7 @@ const renderTag = () => {
       if (item.constructor.name === 'SchoolHistory') {
         return <SchoolItem key={index} item={item}/>
       } else {
-        return <SchoolItem key={index} item={item}/>
+        return <WorkItem key={index} item={item}/>
       }
     })
     return <List className='about-me-list'> {listItems} </List>

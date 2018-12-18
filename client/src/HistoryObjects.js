@@ -15,11 +15,9 @@ class SchoolHistory extends HistoryObject {
 }
 
 class WorkHistory extends HistoryObject {
-  constructor(title, startDate, endDate, location, jobTitle, description){
+  constructor(title, startDate, endDate, jobTitle){
     super(title, startDate, endDate)
-      this.location = location
       this.jobTitle = jobTitle
-      this.description = description
   }
 }
 

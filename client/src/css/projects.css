@@ -58,7 +58,8 @@
 }
 
 .mdl-list__item-secondary-action{
-  margin-right: 10px;
+  margin: auto;
+  padding: 0;
 }
 
 .mdl-layout__tab:hover{

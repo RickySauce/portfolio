@@ -30,8 +30,6 @@ const SchoolItem = ({item}) => {
     }
   }
 
-  console.log(combineElements())
-
   return (
     <ListItem threeLine>
       <ListItemContent subtitle={combineElements()}>{item.title}</ListItemContent>
