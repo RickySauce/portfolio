@@ -23,7 +23,7 @@ class AboutMeContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{position: 'relative', height: '100%'}}>
          <Card id='picture-card' shadow={5}>
           <img src={Img} id='picture'/>
          </Card>
