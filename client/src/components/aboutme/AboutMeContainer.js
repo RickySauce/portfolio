@@ -17,9 +17,9 @@ class AboutMeContainer extends Component {
          </Card>
          <div id='about-me-main'>
           <div id='about-me-title'>
-            <span>My Life</span>
+            <span>About Me</span>
           </div>
-          <p>
+          <p id='about-me-content'>
           {myLife}
           </p>
          </div>

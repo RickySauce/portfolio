@@ -12,22 +12,29 @@ class HistorySection extends Component {
 
   state = {
     section: sections.workHistory,
-    tab: 'School History'
+    tab: 'School'
   }
 
   handleClick = () => {
     let section;
     let tab;
-    if (this.state.tab === 'School History'){
+    if (this.state.tab === 'School'){
       section = sections.schoolHistory
-      tab = 'Work History'
+      tab = 'Work'
     } else {
       section = sections.workHistory
-      tab = 'School History'
+      tab = 'School'
     }
     this.setState({
       section: section,
       tab: tab
+    })
+  }
+
+  mapListItems = () => {
+    return this.state.section.map(item => {
+      console.log(item.constructor.name)
+      return item.constructor.name === 'SchoolHistory' ? <SchoolItem item={item}/> : <WorkItem item={item}/>
     })
   }
 
@@ -36,10 +43,10 @@ class HistorySection extends Component {
     return (
       <div id='about-me-history'>
         <Tabs id='francine' ripple>
-            <Tab onClick={this.handleClick}>{this.state.tab}</Tab>
-            <Tab onClick={this.handleClick}>{this.state.tab}</Tab>
+            <Tab onClick={this.handleClick}>Switch to {this.state.tab} History</Tab>
         </Tabs>
-        <List>
+        <List id='about-me-list'>
+          {this.mapListItems()}
         </List>
       </div>
     );
