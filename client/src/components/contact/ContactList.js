@@ -19,7 +19,7 @@ class ContactList extends Component {
     state: null,
   }
 
-  updateDimensions = () => {
+  updateContactDimensions = () => {
     let fontSize;
     let height;
     let width;
@@ -41,12 +41,12 @@ class ContactList extends Component {
   }
 
   componentDidMount(){
-    this.updateDimensions()
-    window.addEventListener('resize', this.updateDimensions)
+    this.updateContactDimensions()
+    window.addEventListener('resize', this.updateContactDimensions)
   }
 
   componentWillUnmount(){
-    window.addEventListener('resize', this.updateDimensions)
+    window.addEventListener('resize', this.updateContactDimensions)
   }
 
   render() {

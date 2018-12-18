@@ -9,7 +9,8 @@ import './App.css';
 class App extends Component {
 
   state = {
-    contactOpen: false
+    contactOpen: false,
+    width: null
   }
 
   renderContact = () => {
@@ -22,6 +23,23 @@ class App extends Component {
     }))
   }
 
+  updateDimensions = () => {
+    let width;
+    if( window.innerWidth < 1200 ) {
+      width = 70
+    }
+    this.setState({width: width})
+  }
+
+  componentDidMount(){
+    this.updateDimensions()
+    window.addEventListener('resize', this.updateDimensions)
+  }
+
+  componentWillUnmount(){
+    window.addEventListener('resize', this.updateDimensions)
+  }
+
   render() {
     return (
       <div className="App">
@@ -29,7 +47,7 @@ class App extends Component {
         <React.Fragment>
           <NavBar handleContact={this.handleContact}/>
           {this.renderContact()}
-          <div id='main'>
+          <div id='main' style={{width:`${this.state.width}%`}}>
             <Route exact path="/aboutme" component={AboutMeContainer} />
             <Route exact path="/projects" component={ProjectContainer} />
           </div>
