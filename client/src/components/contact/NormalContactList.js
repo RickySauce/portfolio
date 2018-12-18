@@ -11,7 +11,7 @@ import ContactItemStyling from './ContactItemStyling'
 
 
 
-class ContactList extends Component {
+class NormalContactList extends Component {
 
   state = {
     fontSize: '14px',
@@ -70,4 +70,4 @@ class ContactList extends Component {
   }
 }
 
-export default ContactList;
+export default NormalContactList;
