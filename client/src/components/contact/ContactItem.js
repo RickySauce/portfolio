@@ -1,10 +1,10 @@
 import React from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
-import '../css/icon.css';
+import '../../css/icon.css';
 import {ListItem, ListItemContent } from 'react-mdl'
 import copy from 'copy-to-clipboard';
-import capitalize from '../capitalize'
+import capitalize from '../../capitalize'
 
 const ContactItem = (props) => {
 

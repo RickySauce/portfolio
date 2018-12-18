@@ -1,10 +1,16 @@
 #contact-card {
-  width: 370px;
+  z-index: 0;
+  display: inline-flex;
+  max-width: 20%;
   height: 510px;
-  margin: auto;
   margin-right: 20px;
-  margin-top: -200px;
+  margin-top: 50px;
   float: right;
+}
+
+#contact-list {
+  position: relative;
+  width: 110%;
 }
 
 #email {
@@ -17,9 +23,9 @@
 }
 
 #discord {
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
   padding-bottom: 3px;
 }
 
@@ -51,4 +57,8 @@
 
 .contact-item > span > span {
   font-style: oblique;
+}
+
+#contact-list .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+  font-stretch: condensed;
 }

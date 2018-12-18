@@ -6,6 +6,15 @@
     left: 0;
 }
 
+#project-container .page-content {
+  padding-top: 80px;
+  padding-right: 60px;
+}
+
+#project-container .mdl-list__item {
+  margin-top: 20px;
+}
+
 #tab-title-row {
   background-color:  #2251AB;
 }

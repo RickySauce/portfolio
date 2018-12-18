@@ -43,7 +43,7 @@ class NavBar extends Component {
 
 render(){
   return (
-    <div style={{height: '300px', position: 'relative'}}>
+    <div style={{height: '64px', width: '100%', position: 'relative'}}>
       <Layout fixedHeader>
         <Header title={<span>
            <strong id="nav-title">Eric DeSimone</strong>

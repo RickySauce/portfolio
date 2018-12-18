@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import AboutMeContainer from './components/aboutme/AboutMeContainer'
-import ContactList from './components/ContactList'
+import ContactList from './components/contact/ContactList'
 import ProjectContainer from './components/projects/ProjectContainer'
 import './App.css';
 
