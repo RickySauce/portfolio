@@ -7,45 +7,53 @@ import { MdEmail } from "react-icons/md";
 import {List, Card, CardTitle, CardText} from 'react-mdl'
 import ReactTooltip from 'react-tooltip'
 import ContactItem from './ContactItem'
+import ContactItemStyling from './ContactItemStyling'
+import  AvatarVisibility from './AvatarVisibility'
 
 class SmallContactList extends Component {
 
   state = {
+    width: null,
+    height: null,
+    visibility: null,
+    divWidth: null,
+    divHeight: null
   }
 
-  // updateContactDimensions = () => {
-  //   let fontSize;
-  //   let height;
-  //   let width;
-  //   if( window.innerWidth < 1268 ) {
-  //     height = 25
-  //     width = 25
-  //     fontSize = '8px'
-  //   } else if (window.innerWidth < 1396 ) {
-  //     height = 30
-  //     width = 30
-  //     fontSize = '10px'
-  //   } else if(window.innerWidth < 1525){
-  //     height = 35
-  //     width = 35
-  //     fontSize = '12px'
-  //   }
-  //   this.setState({fontSize: fontSize, height: height, width: width})
-  //
-  // }
-  //
-  // componentDidMount(){
-  //   this.updateContactDimensions()
-  //   window.addEventListener('resize', this.updateContactDimensions)
-  // }
-  //
-  // componentWillUnmount(){
-  //   window.addEventListener('resize', this.updateContactDimensions)
-  // }
+  updateSmall = () => {
+    let height; let width; let visibility; let divWidth; let divHeight;
+    if( window.innerWidth < 600 ) {
+      height = 25
+      width = 25
+    } else if (window.innerWidth < 760 ) {
+      height = 30
+      width = 30
+    } else if(window.innerWidth < 860){
+      height = 35
+      width = 35
+    }
+    if(window.innerWidth < 684){
+      visibility = 'hidden'
+    }if(window.innerWidth < 400){
+      divWidth = '100%'
+      divHeight = '100px'
+    }
+    this.setState({visibility: visibility, height: height, width: width, divWidth: divWidth, divHeight: divHeight})
+  }
+
+  componentDidMount(){
+    this.updateSmall()
+    window.addEventListener('resize', this.updateSmall)
+  }
+
+  componentWillUnmount(){
+    window.addEventListener('resize', this.updateSmall)
+  }
 
   render() {
     return (
-      <Card shadow={3} id='small-contact-card'>
+      <>
+      <Card style={{height: this.state.divHeight, width: this.state.divWidth}} shadow={3} id='small-contact-card'>
         <ReactTooltip place='right' className='icon-tooltips'/>
         <CardTitle expand style={{ height: '40%', color: 'rgba(255,255,255,0.9)', background: 'url(https://res.cloudinary.com/wajahatkarimcom/image/upload/v1518636807/contactme.png)150% #BDF3FE'}}>Contact Me</CardTitle>
         <CardText>
@@ -57,6 +65,9 @@ class SmallContactList extends Component {
           </List>
         </CardText>
        </Card>
+       <ContactItemStyling width={this.state.width} height={this.state.height}/>
+       <AvatarVisibility visibility={this.state.visibility}/>
+       </>
     );
   }
 }
