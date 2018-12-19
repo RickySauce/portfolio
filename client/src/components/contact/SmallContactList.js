@@ -34,7 +34,7 @@ class SmallContactList extends Component {
     }
     if(window.innerWidth < 684){
       visibility = 'hidden'
-    }if(window.innerWidth < 400){
+    }if(window.innerWidth < 470){
       divWidth = '100%'
       divHeight = '100px'
     }

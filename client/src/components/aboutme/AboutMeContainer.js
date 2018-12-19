@@ -9,9 +9,32 @@ import HistorySection from './HistorySection'
 
 class AboutMeContainer extends Component {
 
+  state = {
+    id: null
+  }
+
+  updateID = () => {
+    let id;
+    if( window.innerWidth < 1063 ) {
+      id = 'about-me-main-small'
+    } else {
+      id = null
+    }
+    this.setState({id: id})
+  }
+
+  componentDidMount(){
+    this.updateID()
+    window.addEventListener('resize', this.updateID)
+  }
+
+  componentWillUnmount(){
+    window.addEventListener('resize', this.updateID)
+  }
+
   render() {
     return (
-      <div style={{position: 'relative', height: '100%'}}>
+      <div id={this.state.id} style={{position: 'relative', height: '100%'}}>
          <Card id='picture-card' shadow={5}>
           <img src={Img} id='picture'/>
          </Card>

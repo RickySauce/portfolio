@@ -10,7 +10,8 @@ class App extends Component {
 
   state = {
     contactOpen: false,
-    width: null
+    width: 75,
+    margin: null
   }
 
   renderContact = () => {
@@ -24,11 +25,16 @@ class App extends Component {
   }
 
   updateDimensions = () => {
-    let width;
-    if( window.innerWidth < 1200 ) {
+    let width; let margin;
+    if( window.innerWidth < 470  ) {
+      width = 100
+      margin = '0px'
+    }else if (window.innerWidth < 1200) {
       width = 70
+    } else {
+      width = 75
     }
-    this.setState({width: width})
+    this.setState({width: width, margin: margin})
   }
 
   componentDidMount(){
@@ -47,7 +53,7 @@ class App extends Component {
         <React.Fragment>
           <NavBar handleContact={this.handleContact}/>
           {this.renderContact()}
-          <div id='main' style={{width:`${this.state.width}%`}}>
+          <div id='main' style={{width:`${this.state.width}%`, margin: this.state.margin}}>
             <Route exact path="/aboutme" component={AboutMeContainer} />
             <Route exact path="/projects" component={ProjectContainer} />
           </div>

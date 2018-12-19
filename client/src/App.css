@@ -8,13 +8,10 @@ body {
 
 #main {
   min-height: 700px;
-  width: 75%;
   display: inline-block;
   background-color: white;
   overflow: auto;
   position: relative;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 50px;
+  margin: 50px 20px 0px 20px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
