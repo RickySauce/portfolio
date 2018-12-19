@@ -82,8 +82,12 @@
 }
 
 @media screen and (max-width: 1057px){
-  .mdl-list__item-text-body {
+  .project-title, .mdl-list__item-text-body {
     margin-left: 20px;
+  }
+
+  .mdl-list__item--three-line .mdl-list__item-secondary-content {
+    margin-left: -10px;
   }
 
   #project-container .mdl-list__item {
@@ -99,5 +103,6 @@
 @media screen and (max-width: 500px){
   #project-container .mdl-list__item {
     overflow: scroll;
+    text-align: left;
   }
 }
