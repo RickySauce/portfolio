@@ -6,7 +6,6 @@ import { List, Tab, Tabs } from 'react-mdl'
 import SchoolItem from './SchoolItem'
 import WorkItem from './WorkItem'
 import * as sections from '../../aboutMe'
-import jsParser from '../../jsParser'
 
 class HistorySection extends Component {
 
@@ -32,14 +31,12 @@ class HistorySection extends Component {
   }
 
   mapListItems = () => {
-    return this.state.section.map(item => {
-      console.log(item.constructor.name)
-      return item.constructor.name === 'SchoolHistory' ? <SchoolItem item={item}/> : <WorkItem item={item}/>
+    return this.state.section.map((item, index) => {
+      return item.constructor.name === 'SchoolHistory' ? <SchoolItem key={index} item={item}/> : <WorkItem key={index} item={item}/>
     })
   }
 
   render(){
-      console.log(this.state)
     return (
       <div id='about-me-history'>
         <Tabs id='francine' ripple>

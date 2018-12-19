@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../../css/technology-icons.css'
-import { ListItem, ListItemContent, ListItemAction, Tooltip, Cell, Grid } from 'react-mdl'
+import { ListItem, ListItemContent, ListItemAction, Tooltip, Cell } from 'react-mdl'
 
 const ProjectItem = ({project}) => {
 

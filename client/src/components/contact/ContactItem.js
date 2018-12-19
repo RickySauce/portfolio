@@ -9,7 +9,7 @@ import capitalize from '../../capitalize'
 const ContactItem = (props) => {
 
   const handleClick = (event) => {
-      copy(props.subtitle)
+      copy(props.subtitle.props.children)
     }
 
   const img = React.cloneElement( props.img,

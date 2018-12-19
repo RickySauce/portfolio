@@ -10,17 +10,20 @@ import HistorySection from './HistorySection'
 class AboutMeContainer extends Component {
 
   state = {
-    id: null
+    id: null,
+    font: null
   }
 
   updateID = () => {
-    let id;
+    let id; let font;
     if( window.innerWidth < 1063 ) {
       id = 'about-me-main-small'
     } else {
       id = null
+    } if( window.innerWidth < 800) {
+      font = '80%'
     }
-    this.setState({id: id})
+    this.setState({id: id, font: font})
   }
 
   componentDidMount(){
@@ -42,7 +45,7 @@ class AboutMeContainer extends Component {
           <div id='about-me-title'>
             <span>About Me</span>
           </div>
-          <p id='about-me-content'>
+          <p style={{fontSize: this.state.font}} id='about-me-content'>
           {myLife}
           </p>
          </div>

@@ -11,8 +11,6 @@ const WorkItem = ({item}) => {
     return `${moment(item.startDate).format('MMM YYYY')} - ${moment(item.endDate).format('MMM YYYY')}`
   }
 
-  console.log(item)
-
   const combineElements = () => {
     return <><span>{term()}</span><br></br><span>{item.jobTitle}</span></>
   }
