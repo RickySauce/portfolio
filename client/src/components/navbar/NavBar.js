@@ -6,6 +6,7 @@ import { Layout, Header, MenuItem, } from 'react-mdl'
 import { MdMenu } from "react-icons/md";
 import Icons from './Icons'
 import Links from './Links'
+import NavMenu from './NavMenu'
 
 class NavBar extends Component {
 
@@ -64,7 +65,7 @@ class NavBar extends Component {
 
 render(){
   return (
-    <div style={{height: '64px', width: '100%', position: 'relative'}}>
+    <div style={{height: '64px', width: '100%', position: 'relative', overflow: 'visible'}}>
       <Layout fixedHeader>
         <Header id={this.state.id} title={<span>
            <strong id="nav-title">Eric DeSimone</strong>
@@ -72,7 +73,8 @@ render(){
            </span>}>
            {this.renderLinks()}
           </Header>
-          <MdMenu id='menu' style={{}}/>
+          <MdMenu id='menu'/>
+          <NavMenu handleContact={this.handleContact} style={this.state.contactStyle}/>
         </Layout>
     </div>
   )

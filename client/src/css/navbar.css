@@ -1,3 +1,6 @@
+.mdl-layout__inner-container {
+  overflow: visible;
+}
 
 .mdl-layout__header {
   background-color: #002967;
@@ -66,4 +69,10 @@
   color: white;
   width: 25px;
   height: 25px;
+}
+
+#menu:hover {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }

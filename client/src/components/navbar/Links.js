@@ -3,7 +3,7 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import '../../css/technology-icons.css'
 import { Link } from 'react-router-dom'
-import { Tooltip, Navigation } from 'react-mdl'
+import { Navigation } from 'react-mdl'
 
 const Links = (props) => {
 
