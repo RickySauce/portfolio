@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NormalContactList from './NormalContactList'
+import SmallContactList from './SmallContactList'
 
 class ContactCardWrapper extends Component {
 
@@ -8,7 +9,7 @@ class ContactCardWrapper extends Component {
   }
 
   renderCard = () => {
-    return this.state.size === 'normal' ? <NormalContactList/> : null
+    return this.state.size === 'normal' ? <NormalContactList/> : <SmallContactList/>
   }
 
   updateContactCard = () => {

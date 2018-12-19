@@ -62,3 +62,53 @@
 #contact-list .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
   font-stretch: condensed;
 }
+
+#small-contact-list {
+  padding-top: 3%;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#small-contact-list .contact-item {
+  border: none;
+}
+
+#small-contact-list .mdl-list__item-sub-title {
+  visibility: hidden;
+}
+
+#small-contact-list .mdl-list__item-primary-content > span {
+  font-size: 70%;
+}
+
+#small-contact-list  > li {
+  white-space: nowrap;
+  position: relative;
+  width: 25%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#small-contact-card {
+  height: 120px;
+  width: 70%;
+  display: inline-block;
+  position: relative;
+}
+
+#small-contact-card .mdl-card__supporting-text{
+  position: absolute;
+  height: 80px;
+}
+
+#small-contact-card .mdl-card__title-text {
+  position: absolute;
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.mdl-card {
+  min-height: 100px;
+}

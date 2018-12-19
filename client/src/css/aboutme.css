@@ -29,10 +29,11 @@
   }
 
   #about-me-title > span {
+    display: block;
     color: rgba(255,255,255,0.87);
     font-size: 16px;
-    position: absolute;
-    margin-top: 30px;
+    position: relative;
+    padding-top: 30px;
   }
 
   #about-me-history {
@@ -81,8 +82,8 @@
     font-family: 'Courier New';
     text-indent:40px;
     margin: auto;
-    font-size: 16px;
-    padding: 120px;
+    font-size: 100%;
+    padding: 10%;
     text-align: left;
     line-height: 30px;
   }
