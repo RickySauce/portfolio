@@ -3,8 +3,6 @@ import Style from 'style-it';
 
 const ProjectImage = ({img}) => {
 
-  console.log(img)
-
   return (
     <Style>
     {`
