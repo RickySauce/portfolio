@@ -11,19 +11,23 @@ class AboutMeContainer extends Component {
 
   state = {
     id: null,
-    font: null
+    font: null,
+    alignment: null,
+    indent: null
   }
 
   updateID = () => {
-    let id; let font;
+    let id; let font; let alignment; let indent;
     if( window.innerWidth < 1063 ) {
       id = 'about-me-main-small'
     } else {
       id = null
     } if( window.innerWidth < 800) {
       font = '80%'
+      alignment = 'center'
+      indent = '0px'
     }
-    this.setState({id: id, font: font})
+    this.setState({id: id, font: font, alignment: alignment, indent: indent})
   }
 
   componentDidMount(){
@@ -32,7 +36,7 @@ class AboutMeContainer extends Component {
   }
 
   componentWillUnmount(){
-    window.addEventListener('resize', this.updateID)
+    window.removeEventListener('resize', this.updateID)
   }
 
   render() {
@@ -45,7 +49,7 @@ class AboutMeContainer extends Component {
           <div id='about-me-title'>
             <span>About Me</span>
           </div>
-          <p style={{fontSize: this.state.font}} id='about-me-content'>
+          <p style={{fontSize: this.state.font, textAlign: this.state.alignment, textIndent: this.state.indent}} id='about-me-content'>
           {myLife}
           </p>
          </div>

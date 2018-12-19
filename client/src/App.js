@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './components/NavBar'
+import NavBar from './components/navbar/NavBar'
 import AboutMeContainer from './components/aboutme/AboutMeContainer'
 import ContactCardWrapper from './components/contact/ContactCardWrapper'
 import ProjectContainer from './components/projects/ProjectContainer'
@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentWillUnmount(){
-    window.addEventListener('resize', this.updateDimensions)
+    window.removeEventListener('resize', this.updateDimensions)
   }
 
   render() {

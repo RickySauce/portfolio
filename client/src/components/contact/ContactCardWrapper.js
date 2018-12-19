@@ -28,7 +28,7 @@ class ContactCardWrapper extends Component {
   }
 
   componentWillUnmount(){
-    window.addEventListener('resize', this.updateContactCard)
+    window.removeEventListener('resize', this.updateContactCard)
   }
 
 

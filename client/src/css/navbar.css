@@ -40,3 +40,30 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+#navbar-small .nav-icons {
+  display: inline;
+}
+
+#navbar-small #nav-title {
+  display: inline;
+  font-size: 16px;
+}
+
+#navbar-small .nav-links {
+  visibility: hidden;
+}
+
+#navbar-small #contact-link {
+  visibility: hidden;
+}
+
+#menu {
+  margin-top: 15px;
+  margin-left: 15px;
+  position: absolute;
+  z-index: 1000;
+  color: white;
+  width: 25px;
+  height: 25px;
+}

@@ -47,7 +47,7 @@ class SmallContactList extends Component {
   }
 
   componentWillUnmount(){
-    window.addEventListener('resize', this.updateSmall)
+    window.removeEventListener('resize', this.updateSmall)
   }
 
   render() {

@@ -46,7 +46,7 @@ class NormalContactList extends Component {
   }
 
   componentWillUnmount(){
-    window.addEventListener('resize', this.updateContactDimensions)
+    window.removeEventListener('resize', this.updateContactDimensions)
   }
 
   render() {
