@@ -71,7 +71,8 @@
   }
 
   #about-me-list .mdl-list__item-text-body{
-    color: rgba(255,255,255,0.54)
+    color: rgba(255,255,255,0.54);
+    margin: auto;
   }
 
   #about-me-list {

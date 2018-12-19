@@ -22,19 +22,16 @@ class SmallContactList extends Component {
 
   updateSmall = () => {
     let height; let width; let visibility; let divWidth; let divHeight;
-    if( window.innerWidth < 600 ) {
-      height = 25
-      width = 25
-    } else if (window.innerWidth < 760 ) {
+  if (window.innerWidth < 760 ) {
       height = 30
       width = 30
     } else if(window.innerWidth < 860){
       height = 35
       width = 35
     }
-    if(window.innerWidth < 684){
+    if(window.innerWidth < 475){
       visibility = 'hidden'
-    }if(window.innerWidth < 470){
+    }if(window.innerWidth < 700){
       divWidth = '100%'
       divHeight = '100px'
     }
@@ -54,7 +51,7 @@ class SmallContactList extends Component {
     return (
       <>
       <Card style={{height: this.state.divHeight, width: this.state.divWidth}} shadow={3} id='small-contact-card'>
-        <ReactTooltip place='right' className='icon-tooltips'/>
+        <ReactTooltip place='right'/>
         <CardTitle expand style={{ height: '40%', color: 'rgba(255,255,255,0.9)', background: 'url(https://res.cloudinary.com/wajahatkarimcom/image/upload/v1518636807/contactme.png)150% #BDF3FE'}}>Contact Me</CardTitle>
         <CardText>
           <List id='small-contact-list'>

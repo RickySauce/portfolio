@@ -50,12 +50,6 @@
   font-size: 24px;
 }
 
-.mdl-list__item-text-body {
-  margin: auto;
-  max-width: 800px;
-  position: relative;
-}
-
 .project-item .mdl-list__item-text-body{
   color: black;
 }
@@ -75,4 +69,35 @@
   text-decoration: none;
   color: rgba(255,255,255, 0.6);
   font-weight: bold;
+}
+
+.mdl-list__item {
+  overflow: visible;
+}
+
+.mdl-list__item-text-body {
+  margin: auto;
+  max-width: 800px;
+  position: relative;
+}
+
+@media screen and (max-width: 1057px){
+  .mdl-list__item-text-body {
+    margin-left: 20px;
+  }
+
+  #project-container .mdl-list__item {
+    margin-bottom: 40px;
+  }
+
+  #project-container .page-content {
+    padding-top: 40px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  #project-container .mdl-list__item {
+    overflow: scroll;
+  }
 }

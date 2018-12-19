@@ -34,7 +34,7 @@ class ProjectContainer extends Component {
   render() {
     return (
       <div id='project-container'>
-        <Layout fixedTabs>
+        <Layout fixedHeader fixedTabs>
             <Header>
                 <HeaderRow id='tab-title-row' title="Projects" />
                 <HeaderTabs className='tab-bar' ripple activeTab={0} onChange={(tabId) => {this.handleChange(tabId)}}>

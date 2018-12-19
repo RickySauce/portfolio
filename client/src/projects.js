@@ -19,8 +19,8 @@ const ruby = {
 
        new Project(
          'Beer-Review-Sinatra',
-         `A beer Forum designed to allow users to interact with each other about their favorite beers.
-          Utilizes the Sinatra backend framework for ruby, to create functionable routes.
+         `A beer forum designed to allow users to interact with each other about their favorite beers.
+          Utilizes the Sinatra backend framework for ruby to create functionable routes.
           Uses ActiveRecord to save data.`,
          ['ruby', 'sql'],
          'https://github.com/RickySauce/Beer-Review-Sinatra'
@@ -35,8 +35,8 @@ const rubyOnRails = {
         'Home-Brews-Rails ',
         `An application designed to document and share a user's brewing recipes.
          Built with a Ruby on Rails backend.
-         Persists data with SQL via activerecord.
-         Utilizes rails generators to handle the quick creation of controllers, models and migrations.`,
+         Persists data with SQL via ActiveRecord.
+         Utilizes Rails generators to handle the quick creation of controllers, models and migrations.`,
         ['rails', 'sql'],
         ' https://github.com/RickySauce/HomeBrews-Rails'
       ),
@@ -58,7 +58,7 @@ const react = {
       new Project(
         'BeerReview-REACT',
         `Idea adopted from Beer-Review-Sinatra.
-         Built with a React front end for an entirely redirectless user experience.
+         Built with a React frontend for an entirely redirectless user experience.
          Makes use of React-Browser to simulate navigation to other routes within the app.
          Uses Redux for easy update of the global store`,
          ['rails','sql','react'],
@@ -67,7 +67,7 @@ const react = {
 
       new Project(
         'Joes-Breakfast-Shop',
-        `an application built for the startup company, 'Errunds', who abruptly stopped all communication with me after I explained how it was built.
+        `An application built for the startup company, 'Errunds', who abruptly stopped all communication with me after I explained how it was built.
         Built with a React frontend.
         Built on a Rails backend.
         Utilizes the ActiveRecord ORM coupled with a Sqlit3 database.`,
@@ -77,8 +77,8 @@ const react = {
 
       new Project(
         'NFl-Pickems',
-        `designed to make weekly NFL pickem pools more convenient for groups of friends.
-         Makes use of the ruby gem Farraday to send http requests to a third-party API.
+        `Designed to make weekly NFL pickem pools more convenient for groups of friends.
+         Makes use of the Ruby gem Farraday to send http requests to a third-party API.
          Works with dynamic time objects to give a user the most accurate game time information.`,
          ['react', 'bootstrap', 'rails'],
          'https://github.com/RickySauce/NFl-Pickems'

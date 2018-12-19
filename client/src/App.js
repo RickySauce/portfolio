@@ -26,7 +26,7 @@ class App extends Component {
 
   updateDimensions = () => {
     let width; let margin;
-    if( window.innerWidth < 470  ) {
+    if( window.innerWidth < 700  ) {
       width = 100
       margin = '0px'
     }else if (window.innerWidth < 1200) {

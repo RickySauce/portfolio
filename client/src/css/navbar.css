@@ -62,6 +62,8 @@
 }
 
 #menu {
+  top: 0;
+  left: 0;
   margin-top: 15px;
   margin-left: 15px;
   position: absolute;
@@ -75,4 +77,12 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
+}
+
+.menu-links > li > a {
+  color: black;
+}
+
+.menu-links #contact-link {
+  color: black;
 }

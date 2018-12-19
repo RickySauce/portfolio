@@ -10,11 +10,10 @@ const NavMenu = (props) => {
 
   return (
     <div style={{position: 'relative'}}>
-      <Menu id='menu-list' target="menu">
-          <MenuItem>Some Action</MenuItem>
-          <MenuItem>Another Action</MenuItem>
-          <MenuItem disabled>Disabled Action</MenuItem>
-          <MenuItem>Yet Another Action</MenuItem>
+      <Menu className='menu-links' target="menu">
+          <MenuItem><Link to='/aboutme'>About Me</Link></MenuItem>
+          <MenuItem><Link to='/projects'>Projects</Link></MenuItem>
+          <MenuItem onClick={props.handleContact}>Contact</MenuItem>
       </Menu>
   </div>
   );

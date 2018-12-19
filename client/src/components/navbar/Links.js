@@ -7,11 +7,6 @@ import { Navigation } from 'react-mdl'
 
 const Links = (props) => {
 
-  const handleIconClick = (event) => {
-    event.preventDefault()
-    window.open(event.currentTarget.href)
-  }
-
   return (
     <>
     <Navigation className='nav-links'>

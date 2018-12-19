@@ -73,7 +73,7 @@ render(){
            </span>}>
            {this.renderLinks()}
           </Header>
-          <MdMenu id='menu'/>
+          <MdMenu style={{visibility: this.state.id === 'navbar-small' ? null : 'hidden'}} id='menu'/>
           <NavMenu handleContact={this.handleContact} style={this.state.contactStyle}/>
         </Layout>
     </div>

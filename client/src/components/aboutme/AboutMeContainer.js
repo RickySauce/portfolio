@@ -23,7 +23,6 @@ class AboutMeContainer extends Component {
     } else {
       id = null
     } if( window.innerWidth < 800) {
-      font = '80%'
       alignment = 'center'
       indent = '0px'
     }
