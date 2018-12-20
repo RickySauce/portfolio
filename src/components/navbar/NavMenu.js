@@ -9,7 +9,7 @@ import { MdMenu } from "react-icons/md";
 const NavMenu = (props) => {
 
   return (
-    <div style={{position: 'relative'}}>
+    <div id='menu-div'>
       <Menu className='menu-links' target="menu">
           <MenuItem><Link to='/aboutme'>About Me</Link></MenuItem>
           <MenuItem><Link to='/projects'>Projects</Link></MenuItem>

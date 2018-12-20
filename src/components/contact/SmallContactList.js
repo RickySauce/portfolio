@@ -51,7 +51,7 @@ class SmallContactList extends Component {
     return (
       <>
       <Card style={{height: this.state.divHeight, width: this.state.divWidth}} shadow={3} id='small-contact-card'>
-        <ReactTooltip place='right'/>
+        <ReactTooltip place='top'/>
         <CardTitle expand style={{ height: '40%', color: 'rgba(255,255,255,0.9)', background: 'url(https://res.cloudinary.com/wajahatkarimcom/image/upload/v1518636807/contactme.png)150% #BDF3FE'}}>Contact Me</CardTitle>
         <CardText>
           <List id='small-contact-list'>

@@ -54,7 +54,7 @@ class App extends Component {
           <NavBar handleContact={this.handleContact}/>
           {this.renderContact()}
           <div id='main' style={{width:`${this.state.width}%`, margin: this.state.margin}}>
-            <Route exact path="/" component={AboutMeContainer} />
+            <Route exact path="/" component={ProjectContainer} />
             <Route exact path="/aboutme" component={AboutMeContainer} />
             <Route exact path="/projects" component={ProjectContainer} />
           </div>
