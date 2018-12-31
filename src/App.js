@@ -29,7 +29,7 @@ class App extends Component {
     if( window.innerWidth < 700  ) {
       width = 100
       margin = '0px'
-    }else if (window.innerWidth < 1200) {
+    }else if (window.innerWidth < 1220) {
       width = 70
     } else {
       width = 75

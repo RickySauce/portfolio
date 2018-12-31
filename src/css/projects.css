@@ -103,7 +103,9 @@
 
 @media screen and (max-width: 500px){
   #project-container .mdl-list__item {
-    overflow: scroll;
+    margin-bottom: 120px;
+    overflow: visible;
     text-align: left;
   }
+
 }
