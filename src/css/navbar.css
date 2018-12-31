@@ -1,3 +1,7 @@
+.nav-links .mdl-navigation__link {
+  text-decoration: none;
+}
+
 .mdl-layout__inner-container {
   overflow: visible;
 }
@@ -35,11 +39,17 @@
 
 .nav-icon:hover {
   cursor: pointer;
+  margin: -12.5px;
   width: 30px;
   height: 30px;
 }
 
+#contact-link:hover {
+  margin: -2px;
+}
+
 .nav-links .mdl-navigation__link:hover {
+  margin: -2.5px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -80,6 +90,7 @@
 }
 
 .menu-links > li > a {
+  text-decoration: none;
   color: black;
 }
 

@@ -80,11 +80,13 @@
   }
 
   #about-me-content {
+    overflow: hidden;
     font-family: 'Courier New';
     text-indent:40px;
     margin: auto;
     font-size: 100%;
     padding: 10%;
+    padding-bottom: 15%;
     text-align: left;
     line-height: 30px;
   }

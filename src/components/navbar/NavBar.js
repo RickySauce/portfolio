@@ -48,6 +48,7 @@ class NavBar extends Component {
       this.setState({
         contactOpen: true,
         contactStyle: {
+          margin: '-2px',
           textDecoration: 'none',
           fontWeight: 'bold'
         }
