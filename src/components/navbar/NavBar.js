@@ -18,7 +18,7 @@ class NavBar extends Component {
 
   updateNavID = () => {
     let id;
-    if( window.innerWidth < 700 ) {
+    if( window.innerWidth < 750 ) {
       id = 'navbar-small'
     } else {
       id = null

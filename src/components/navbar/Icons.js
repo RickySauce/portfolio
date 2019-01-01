@@ -4,7 +4,7 @@ import 'react-mdl/extra/material.js';
 import '../../css/technology-icons.css'
 import { Tooltip, Navigation } from 'react-mdl'
 import { IoLogoLinkedin } from "react-icons/io";
-import { FaGithub} from "react-icons/fa";
+import { FaGithub, FaTwitch} from "react-icons/fa";
 import { TiDocument} from "react-icons/ti";
 
 
@@ -17,7 +17,10 @@ const Icons = () => {
 
   return (
     <Navigation className='nav-icons'>
-    <Tooltip label="Linkedin" position="bottom">
+      <Tooltip label="Twitch" position="bottom">
+      <a href='https://www.twitch.tv/rickysauc3' onClick={handleIconClick}> <FaTwitch className='nav-icon'/></a>
+      </Tooltip>
+      <Tooltip label="Linkedin" position="bottom">
       <a href='https://www.linkedin.com/in/ericdesimone91/' onClick={handleIconClick}><IoLogoLinkedin className='nav-icon'/></a>
       </Tooltip>
       <Tooltip label="Github" position="bottom">
